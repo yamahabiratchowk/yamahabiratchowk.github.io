@@ -1,0 +1,173 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f5f5f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 800px;
+    overflow: hidden;
+}
+
+.calculator-header {
+    background-color: #3a86ff;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.calculator-body {
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+@media (min-width: 768px) {
+    .calculator-body {
+        flex-direction: row;
+    }
+}
+
+.input-section {
+    flex: 1;
+}
+
+.result-section {
+    flex: 1;
+    background-color: #f0f8ff;
+    border-radius: 8px;
+    padding: 20px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: #333;
+}
+
+input[type="number"],
+select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+input[type="range"] {
+    width: 100%;
+    margin-top: 10px;
+}
+
+.range-values {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5px;
+    font-size: 12px;
+    color: #666;
+}
+
+button {
+    background-color: #3a86ff;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #2563eb;
+}
+
+.result-item {
+    margin-bottom: 15px;
+}
+
+.result-item h3 {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.result-value {
+    font-size: 24px;
+    font-weight: bold;
+    color: #3a86ff;
+}
+
+.amortization {
+    margin-top: 30px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+th, td {
+    padding: 10px;
+    text-align: right;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #f0f0f0;
+    font-weight: 600;
+    color: #333;
+    text-align: center;
+}
+
+td:first-child, th:first-child {
+    text-align: left;
+}
+
+.amortization-toggle {
+    background-color: #f0f0f0;
+    color: #333;
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+.amortization-toggle:hover {
+    background-color: #ddd;
+}
+
+.hidden {
+    display: none;
+}
+
+.time-period-container {
+    display: flex;
+    gap: 15px;
+    align-items: flex-end;
+}
+
+.time-period-container .form-group {
+    flex: 1;
+}

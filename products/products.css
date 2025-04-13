@@ -1,0 +1,126 @@
+/* Reset & base styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(to bottom, #001F54, #002c7f);
+    color: #fff;
+    padding: 40px 20px;
+}
+
+/* Section Containers */
+.all, .second {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 50px;
+}
+
+/* Bike card styling */
+.bike-card {
+    background-color: #000e2e;
+    border: 2px solid #0066cc;
+    border-radius: 10px;
+    padding: 20px;
+    width: 320px;
+    height: 260px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.bike-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.7);
+}
+
+.bike-card img {
+    width: 100%;
+    max-height: 160px;
+    object-fit: contain;
+    border-radius: 6px;
+}
+
+/* Bike name text */
+.scoo {
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: 600;
+    text-align: center;
+    margin-top: 12px;
+}
+
+/* Button style */
+.get {
+    background-color: #fbb034;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    transition: all 0.3s ease;
+    margin-top: 10px;
+}
+
+.get:hover {
+    background-color: #ffa500;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.4);
+    transform: scale(1.05);
+}
+
+/* Optional price div if you want spacing */
+.price {
+    display: flex;
+    justify-content: center;
+    margin-top: -15px;
+}
+
+/* Title styling */
+.tit {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 40px;
+    color: #fbb034;
+    letter-spacing: 2px;
+}
+/* Typewriter effect */
+.typewriter {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 48px;
+    font-weight: 500;
+    color: #fff;
+    overflow: hidden;
+    border-right: .15em solid #fbb034; /* Cursor color */
+    white-space: nowrap;
+    width: 0;
+    animation: typing 4s steps(12) 1s forwards, blink 0.75s step-end infinite;
+    padding-top: 6px;
+    padding-bottom: 20px;
+}
+
+/* Typing effect */
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+/* Blinking cursor effect */
+@keyframes blink {
+    50% {
+        border-color: transparent;
+    }
+}
